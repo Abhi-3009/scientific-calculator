@@ -1,0 +1,15 @@
+---
+- name: Deploy Calculator Locally
+  hosts: local
+  become: yes
+
+  tasks:
+    - name: Pull latest calculator image
+      command: docker pull codestack123/calculator:latest
+
+    - name: Stop existing container if running
+      command: docker rm -f calculator
+      ignore_errors: yes
+
+    - name: Run calculator container
+      command: docker run -it -d --name calculator codestack123/calculator:latest
