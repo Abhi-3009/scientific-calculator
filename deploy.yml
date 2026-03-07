@@ -1,7 +1,6 @@
 ---
 - name: Deploy Calculator Locally
   hosts: local
-  become: yes
 
   tasks:
     - name: Pull latest calculator image
