@@ -22,13 +22,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh '/usr/local/bin/docker build -t codestack123/calculator:latest .'
+                sh 'docker build -t codestack123/calculator:latest .'
             }
         }
 
         stage('Push Docker Image') {
             steps {
-                sh '/usr/local/bin/docker push codestack123/calculator:latest'
+                sh 'docker push codestack123/calculator:latest'
             }
         }
 
