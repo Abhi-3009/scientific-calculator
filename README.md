@@ -19,3 +19,5 @@ Operations:
 ## Pipeline Flow
 
 Developer → GitHub → Jenkins → Docker → DockerHub → Ansible Deployment
+
+Thank You!
