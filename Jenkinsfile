@@ -38,4 +38,34 @@ pipeline {
             }
         }
     }
+    post {
+
+        success {
+            mail to: 'rai.codestack@gmail.com',
+                 subject: "Jenkins SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """
+Build completed successfully.
+
+Job: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+
+Check details:
+${env.BUILD_URL}
+"""
+        }
+
+        failure {
+            mail to: 'rai.codestack@gmail.com',
+                 subject: "Jenkins FAILURE: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 body: """
+Build failed.
+
+Job: ${env.JOB_NAME}
+Build Number: ${env.BUILD_NUMBER}
+
+Check logs:
+${env.BUILD_URL}
+"""
+        }
+    }
 }
