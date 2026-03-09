@@ -97,7 +97,7 @@ int main() {
             }
 
             case 5:
-                cout << "\nExiting Scientific Calculator...\n" << endl;
+                cout << "\nExiting Scientific Calculator...\nThank You!\n" << endl;
                 return 0;
 
             default:
