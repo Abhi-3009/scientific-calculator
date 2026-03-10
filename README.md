@@ -20,4 +20,4 @@ Operations:
 
 Developer → GitHub → Jenkins → Docker → DockerHub → Ansible Deployment
 
-Thank You! X4
+Thank You! x5
