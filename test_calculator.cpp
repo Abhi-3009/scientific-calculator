@@ -80,7 +80,7 @@ int main()
     check(power(2,-2) == 0.25, "2^-2");
 
     // =============================
-    // Stress / Large Input Tests
+    // Large Input Tests
     // =============================
 
     check(!isnan(squareRoot(1e12)), "sqrt large");
